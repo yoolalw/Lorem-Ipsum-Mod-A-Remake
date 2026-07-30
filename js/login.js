@@ -1,6 +1,8 @@
 const btn = document.getElementById("btn_login")
 const fetchtodo = "./data.json"
+const msg = document.getElementById("msg")
 
+msg.style.display = "none"
 btn.addEventListener("click", async (e) => {
     e.preventDefault()
 
@@ -14,16 +16,22 @@ btn.addEventListener("click", async (e) => {
     const usuario_ativo = data.find(u => u.email === email)
     if (!usuario_ativo) {
         console.log("Usuario nao encontrado")
-        
+        msg.style.display = "block"
         return
     }
     if (usuario_ativo.senha === senha) {
         console.log("login")
-        return   
+        localStorage.setItem("token", usuario_ativo.token)
+        console.log(localStorage.getItem("token"))
+        msg.style.display = "none"
+        return
+    } else {
+        msg.textContent = "Senha incorreta."
+        msg.style.display = "block"
     }
 
 })
 
-function sobre(){
+function sobre() {
     window.location.href = "sobre.html"
 }
