@@ -22,6 +22,8 @@ btn.addEventListener("click", async (e) => {
     if (usuario_ativo.senha === senha) {
         console.log("login")
         localStorage.setItem("token", usuario_ativo.token)
+        localStorage.setItem("nome", usuario_ativo.nome)
+        
         console.log(localStorage.getItem("token"))
         msg.style.display = "none"
         return
