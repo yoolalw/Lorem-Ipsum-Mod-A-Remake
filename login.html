@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="justify-center .animate-down align-middle items-center mt-15 m-auto flex-col flex">
+        <img src="img/lorem_logo.png" class="size-[200px]">
+
+        <div class="justify-center align-middle items-center m-auto flex">
+            <h1 class="font-serif text-gray-600 text-[50px]">Seja bem vindo!</h1>
+        </div>
+
+        <div class="box-input flex flex-col border-1 rounded-xl mt-10 border-gray-400 w-[350px]">
+            <label class="ml-3 font-serif text-gray-800 mt-2" for="email">Email</label>
+            <input type="email" id="email" class="ml-3 h-[40px]" placeholder="email@example.com">
+        </div>
+
+        <div class="box-input flex flex-col border-1 rounded-xl mt-10 border-gray-400 w-[350px]">
+            <label class="ml-3 font-serif mt-2 text-gray-800" for="senha">Senha</label>
+            <input type="password" id="senha" class="ml-3 h-[40px]">
+        </div>
+        <button type="button" id="btn_login" class="mt-10 bg-[#1c365e] h-[40px] w-[300px] rounded-xl font-serif
+            text-blue-100 hover:bg-blue-300 cursor-pointer">Entrar</button>
+        <a href="recuperar_senha.html" class="mt-2 text-blue-400">Esqueci minha senha</a>
+
+        <img src="img/info_151776.png" class="size-[30px] cursor-pointer mt-5" onclick="sobre()">
+    </div>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
