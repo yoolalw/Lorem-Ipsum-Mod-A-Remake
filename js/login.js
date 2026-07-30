@@ -26,7 +26,9 @@ btn.addEventListener("click", async (e) => {
         
         console.log(localStorage.getItem("token"))
         msg.style.display = "none"
+        window.location.href = "home.html"
         return
+
     } else {
         msg.textContent = "Senha incorreta."
         msg.style.display = "block"

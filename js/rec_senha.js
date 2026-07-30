@@ -65,7 +65,6 @@ btn.addEventListener("click", async (e) => {
                 }, 3000)
             } else {
                 msg.textContent = "As senhas nao coincidem."
-
                 msg.style.display = "block"
             }
         })
